@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose port 3232 (or whatever port you choose)
-EXPOSE 3232
+EXPOSE 3636
 
 # Command to start the app (a simple server in this case)
 CMD ["node", "server.js"]
