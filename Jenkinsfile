@@ -5,6 +5,7 @@ pipeline {
         // Define your environment variables here
         GIT_REPO = 'https://github.com/girishgit1/kgfrepo.git'  // Git repository URL
         IMAGE_NAME = 'gera'  // Docker image name
+        BUILD_ID = 'latest'
         DOCKER_HUB_USERNAME = 'dockerqwert123'  // Docker registry URL
         DOCKER_CREDENTIALS_ID = 'docker'  // Jenkins credentials ID for Docker login
         PORT = '3636'  // Port to expose for your container
