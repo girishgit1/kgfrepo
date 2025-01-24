@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    tools {
+        git 'Default'  // Name of the Git tool you defined in Global Tool Configuration
     
     environment {
         // Define your environment variables here
