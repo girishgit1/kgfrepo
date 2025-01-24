@@ -8,6 +8,7 @@ pipeline {
         BUILD_ID = 'latest'
         DOCKER_HUB_USERNAME = 'dockerqwert123'  // Docker registry URL
         DOCKER_CREDENTIALS_ID = 'docker'  // Jenkins credentials ID for Docker login
+        GIT_CREDENTIALS_ID = '5f3e99c3-f1dd-4f38-bf04-5b972ddb73e2'
         PORT = '3636'  // Port to expose for your container
     }
 
