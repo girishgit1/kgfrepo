@@ -39,13 +39,5 @@ pipeline {
             }
         }
         
-        stage('Deploy') {
-            steps {
-                // Deploy the image (e.g., Docker run)
-                script {
-                    sh "docker run -d -p ${env.PORT}:${env.PORT} ${env.IMAGE_NAME}:${env.BUILD_ID}"
-                }
-            }
-        }
     }
 }
