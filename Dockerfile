@@ -1,16 +1,20 @@
-FROM python:latest
+# Use the official Node.js image as a base
+FROM node:14
 
-# Set the working directory in the image
-WORKDIR /app
+# Create and set the working directory
+WORKDIR /usr/src/app
 
-# Copy the files from the host file system to the image file system
-COPY . /app
+# Create a package.json file for dependencies
+COPY package.json ./
 
-# Install the necessary packages
-RUN apt-get update && apt-get install -y python3 python3-pip
+# Install dependencies
+RUN npm install
 
-# Set environment variables
-ENV NAME World
+# Copy the app's source code into the container
+COPY . .
+
+# Expose port 3232 (or whatever port you choose)
 EXPOSE 3232
-# Run a command to start the application
-CMD ["python3", "app.py"]
+
+# Command to start the app (a simple server in this case)
+CMD ["node", "server.js"]
