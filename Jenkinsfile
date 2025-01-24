@@ -15,8 +15,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pull the code from Git repository
-                git "${env.GIT_REPO}"
+                // Use credentials for Git repository
+                git credentialsId: "${env.GIT_CREDENTIALS_ID}", url: "${env.GIT_REPO}"
             }
         }
         
