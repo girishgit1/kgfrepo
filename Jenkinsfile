@@ -18,7 +18,7 @@ pipeline {
                 // Use credentials for Git repository
                 git credentialsId: "${env.GIT_CREDENTIALS_ID}", url: "${env.GIT_REPO}"
             }
-        }cjh
+        }
         
         stage('Build') {
             steps {
