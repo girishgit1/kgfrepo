@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
         // Define your environment variables here
         GIT_REPO = 'https://github.com/girishgit1/kgfrepo.git'  // Git repository URL
@@ -18,7 +18,7 @@ pipeline {
                 // Use credentials for Git repository
                 git credentialsId: "${env.GIT_CREDENTIALS_ID}", url: "${env.GIT_REPO}"
             }
-        }
+        }cjh
         
         stage('Build') {
             steps {
