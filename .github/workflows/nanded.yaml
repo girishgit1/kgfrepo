@@ -1,9 +1,9 @@
 name : nanded
-on : push
+on : workflow_dispatch
 jobs :
   greet :
       runs-on : ubuntu-latest
       steps:
       -  name : "nanded"
-         run : echo "hi i am nanded"
+         run : echo "hi I am Nanded"
 
